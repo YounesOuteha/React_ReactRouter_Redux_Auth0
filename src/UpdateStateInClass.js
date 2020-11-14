@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import Component1 from './functional/Component1'
+import Component2 from './functional/Component2'
+import List from './functional/Lists'
+import Froms from './functional/Forms'
+import Forms from './functional/Forms'
 
 export class UpdateStateInClass extends Component {
     constructor(props){
@@ -28,7 +32,14 @@ export class UpdateStateInClass extends Component {
                 <br></br>
                 {this.state.stateprop2}
                 <br></br>
-        <Component1 prop1={this.state.stateprop1}/>
+                <Component1 prop1={this.state.stateprop1}/>
+                <br></br>
+                <Component2/>
+                <br></br>
+                <List/>
+                <br></br>
+                <br></br>
+                <Forms/>
             </div>
         )
     }
