@@ -16,7 +16,7 @@ export class container1 extends Component {
                 <button onClick={() => this.props.action_creator1()}>GET creator1</button>
                 <button onClick={() => this.props.action_creator2()}>GET creator2</button>
                 <button onClick={() => this.props.action_creator3(user_text)}>GET creator3</button>
-        {this.props.stateprop1 ? <h1>{this.props.stateprop1}</h1> : null}
+                {this.props.stateprop1 ? <h1>{this.props.user_input}</h1> : null} 
             </div>
         )
     }
@@ -24,7 +24,8 @@ export class container1 extends Component {
 
 function mapStateToProps(state){
     return{
-        stateprop1: state.user_text
+        stateprop1: state.reducer1.stateprop1,
+        user_input: state.user_reducer.user_text
     }
 }
 /* const mapStateToProps = (state) =>({stateprop1: state.stateprop1})  */   
